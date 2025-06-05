@@ -7,17 +7,22 @@ OPTIONS  := -I includes
 SRC_DIR  := src
 OBJ_DIR  := obj
 
-SRC_FILES := main.cpp Contact.cpp PhoneBook.cpp
+SRC_FILES := main.cpp Contact.cpp PhoneBook.cpp add.cpp search.cpp
 SRC  := $(addprefix $(SRC_DIR)/,$(SRC_FILES))
 OBJS := $(addprefix $(OBJ_DIR)/,$(SRC_FILES:.cpp=.o))
+
+GREEN  = \033[32m
+BLUE   = \033[34m
+RESET  = \033[0m
+RED    = \033[31m
 
 # ================== RÈGLES ================== #
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@echo "Linking objects..."
+	@echo "$(BLUE)Linking objects...$(RESET)"
 	@$(CC) $(CFLAGS) $(OPTIONS) $(OBJS) -o $(NAME)
-	@echo "✓ Compilation réussie, Ma reine !"
+	@echo "$(GREEN)✓ Compilation réussie, Ma princesse !$(RESET)"
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
 	@mkdir -p $(dir $@)
@@ -25,12 +30,11 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
 
 clean:
 	@rm -rf $(OBJS)
-	@echo "Objets supprimés."
+	@echo "$(RED)✓ objets supprimé !$(RESET)"
 
 fclean: clean
 	@rm -rf $(NAME)
-	@echo "Exécutable supprimé."
-	@echo "✓ Ils ont bien été annihilés, vous dominerez le monde, Ma reine."
+	@echo "$(RED)✓ Exécutable supprimé !$(RESET)"
 
 re: fclean all
 .PHONY: all clean fclean re

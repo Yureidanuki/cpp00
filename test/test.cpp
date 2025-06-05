@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   test.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cschmid <cschmid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/29 14:28:10 by cschmid           #+#    #+#             */
-/*   Updated: 2025/06/05 09:37:46 by cschmid          ###   ########.fr       */
+/*   Created: 2025/05/29 15:04:19 by cschmid           #+#    #+#             */
+/*   Updated: 2025/06/03 10:35:58 by cschmid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBook.hpp"
-#include "Contact.hpp"
 #include <iostream>
 
-int main()
+struct Point
 {
-   PhoneBook instance;
-  
-   instance.affichage();
-    return(0);
+    int x;
+    int y;
+};
+
+
+
+int	main(void)
+{
+    Point p{145, 38};
+
+    std::cout << "(" << p.x << ", " << p.y << ")" << std::endl;
+    p.x = 64;
+    std::cout << "(" << p.x << ", " << p.y << ")" << std::endl;
+	return (0);
 }
-
-

@@ -6,19 +6,74 @@
 /*   By: cschmid <cschmid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/29 14:26:29 by cschmid           #+#    #+#             */
-/*   Updated: 2025/05/29 14:36:43 by cschmid          ###   ########.fr       */
+/*   Updated: 2025/06/05 10:46:24 by cschmid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
-Contact::Contact(void)
+/******************CONSTRUCTEUR******************/
+
+Contact::Contact()
 {
-    std::cout << "Constructor contact " << std::endl;
-    return ;
 }
+
 Contact::~Contact(void)
 {
-    std::cout << "destructor contact" << std::endl;
-    return ;
+}
+
+/******************SETTEUR******************/
+
+void Contact::setFirstName(std::string FirstName)
+{
+	this->_firstName = FirstName;
+}
+void Contact::setLastName(std::string LastName)
+{
+	this->_lastName = LastName;
+}
+void Contact::setNickName(std::string NickName)
+{
+	this->_nickName = NickName;
+}
+void Contact::setNumber(std::string Number)
+{
+	this->_phoneNumber = Number;
+}
+void Contact::setDarkSecret(std::string Secret)
+{
+	this->_darkSecret = Secret;
+}
+/******************GETTEUR******************/
+
+std::string Contact::getFirstName()
+{
+	return (this->_firstName);
+}
+
+std::string Contact::getLastName()
+{
+	return (this->_lastName);
+}
+
+std::string Contact::getNickName()
+{
+	return (this->_nickName);
+}
+
+std::string Contact::getNumber()
+{
+	return (this->_phoneNumber);
+}
+
+std::string Contact::getDarkSecret()
+{
+	return (this->_darkSecret);
+}
+/******************METHOD******************/
+
+bool Contact::isComplete() const
+{
+	return (!_firstName.empty() && !_lastName.empty() && !_nickName.empty()
+		&& !_phoneNumber.empty() && !_darkSecret.empty());
 }
