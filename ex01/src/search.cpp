@@ -6,7 +6,7 @@
 /*   By: cschmid <cschmid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 15:39:54 by cschmid           #+#    #+#             */
-/*   Updated: 2025/06/06 12:36:43 by cschmid          ###   ########.fr       */
+/*   Updated: 2025/06/06 14:04:03 by cschmid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void PhoneBook::search()
 	std::cout << CYAN << BOLD << "+----------+----------+----------+----------+" << std::endl;
 	std::cout << "|  Index   |  f.name  |  l.name  | nickname |" << std::endl;
 	std::cout << "+----------+----------+----------+----------+" << RESET << std::endl;
-	for (int i = 1; i < _size; ++i)
+	for (int i = 0; i < _size; ++i)
 	{
         if (_size < 8)
             displayIndex = i;
