@@ -6,7 +6,7 @@
 /*   By: cschmid <cschmid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/29 14:26:29 by cschmid           #+#    #+#             */
-/*   Updated: 2025/06/05 10:46:24 by cschmid          ###   ########.fr       */
+/*   Updated: 2025/06/06 11:58:51 by cschmid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,30 +46,26 @@ void Contact::setDarkSecret(std::string Secret)
 }
 /******************GETTEUR******************/
 
-std::string Contact::getFirstName()
-{
-	return (this->_firstName);
+std::string Contact::getFirstName() const {
+	return _firstName;
 }
 
-std::string Contact::getLastName()
-{
-	return (this->_lastName);
+std::string Contact::getLastName() const {
+	return _lastName;
 }
 
-std::string Contact::getNickName()
-{
-	return (this->_nickName);
+std::string Contact::getNickName() const {
+	return _nickName;
 }
 
-std::string Contact::getNumber()
-{
-	return (this->_phoneNumber);
+std::string Contact::getNumber() const {
+	return _phoneNumber;
 }
 
-std::string Contact::getDarkSecret()
-{
-	return (this->_darkSecret);
+std::string Contact::getDarkSecret() const {
+	return _darkSecret;
 }
+
 /******************METHOD******************/
 
 bool Contact::isComplete() const

@@ -6,7 +6,7 @@
 /*   By: cschmid <cschmid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/29 13:34:53 by cschmid           #+#    #+#             */
-/*   Updated: 2025/06/05 10:17:15 by cschmid          ###   ########.fr       */
+/*   Updated: 2025/06/06 11:55:03 by cschmid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@
 PhoneBook::PhoneBook(void)
 {
 	_size = 0;
+	_index = 0;
+	for (int i = 0; i < 8; ++i)
+		contact[i] = Contact();
 }
 
 PhoneBook::~PhoneBook(void)
